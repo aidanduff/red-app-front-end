@@ -80,7 +80,7 @@ class ListItemComponent extends Component {
                     </table>
                 </div>
             <div className="row">
-                <button className="btn btn-success" onClick={this.addItemClicked}>Add</button>
+                <button data-testid="add-button" className="btn btn-success" onClick={this.addItemClicked}>Add</button>
             </div>
             </div>
         )

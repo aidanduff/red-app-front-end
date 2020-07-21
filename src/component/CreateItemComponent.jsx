@@ -71,9 +71,9 @@ class CreateItemComponent extends Component {
                         {
                             (props) => (
                                 <Form>
-                                    <ErrorMessage name="description"               component="div"
+                                    <ErrorMessage data-testid ="description-warning" name="description" component="div"
                                         className="alert alert-warning" />
-                                    <ErrorMessage name="name"                   component="div"
+                                    <ErrorMessage data-testid ="name-warning" name="name" component="div"
                                         className="alert alert-warning" />
                                     <fieldset className="form-group">
                                         <label id="name">Name</label>

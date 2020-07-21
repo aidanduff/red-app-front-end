@@ -75,19 +75,15 @@ class CreateItemComponent extends Component {
                                         className="alert alert-warning" />
                                     <ErrorMessage name="name"                   component="div"
                                         className="alert alert-warning" />
-                                    {/* <fieldset className="form-group">
-                                        <label>Id</label>
-                                        <Field className="form-control" type="text" name="id" disabled />
-                                    </fieldset> */}
                                     <fieldset className="form-group">
-                                        <label>Name</label>
-                                        <Field className="form-control" type="text" name="name" />
+                                        <label id="name">Name</label>
+                                        <Field aria-labelledby="name" data-testid="name-field" className="form-control" type="text" name="name" />
                                     </fieldset>
                                     <fieldset className="form-group">
-                                        <label>Description</label>
-                                        <Field className="form-control" type="text" name="description" />
+                                        <label id="description">Description</label>
+                                        <Field aria-labelledby="description" data-testid="description-field" className="form-control" type="text" name="description" />
                                     </fieldset>
-                                    <button className="btn btn-success" type="submit">Save</button>
+                                    <button data-testid="save-button" className="btn btn-success" type="submit">Save</button>
                                 </Form>
                             )
                         }

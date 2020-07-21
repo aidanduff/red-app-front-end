@@ -18,25 +18,20 @@ const renderWithRouter = (component) => {
     }
 }
 
-it('should render the add page', () => {
+it('renders the page header', () => {
+    const { getByText } = render(<ReferenceApp />);
+    const headerElement = getByText('Reference Application');
+    expect(headerElement).toBeInTheDocument();
+  });
 
-    const { container, getByTestId } = renderWithRouter(<ReferenceApp />) 
+it('navigates to create item on add button click', () => {
+
+    const { container, getByTestId } = render(<ReferenceApp />) 
     const addButton = getByTestId('add-button');
     fireEvent.click(addButton);
   
     expect(container.innerHTML).toMatch('Create Item');
 });
 
-// it("accepts input values", () => {
-//     const { container, getByLabelText } = render(<CreateItemComponent/>);
-//     const nameVal = "Aidan";
-//     const descriptionVal = "testdesc";
-  
-//     fireEvent.change(getByLabelText(/Name/i), { target: { value: nameVal } });
-//     fireEvent.change(getByLabelText(/Description/i), { target: { value: descriptionVal } });
-    
-//     expect(container.innerHTML).toMatch(nameVal);
-//     expect(container.innerHTML).toMatch(descriptionVal);
-//   });
 
 

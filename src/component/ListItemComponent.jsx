@@ -20,9 +20,6 @@ class ListItemComponent extends Component {
     }
 
     refreshItems(){
-        // const response = ItemDataService.retrieveAllItems();
-        // response.status === 204? this.setState({ items: [] }) : this.setState({ items: response.data });
-
         ItemDataService.retrieveAllItems()
             .then(
                 response => {

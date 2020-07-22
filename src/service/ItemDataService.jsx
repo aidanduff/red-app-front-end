@@ -5,8 +5,7 @@ const BASE_URL = 'http://localhost:8080'
 class ItemDataService {
 
     retrieveAllItems() {
-        console.log('in retrieve');
-        return axios.get(`${BASE_URL}/items`);
+        return axios.get(`${BASE_URL}/items`);   
     }
 
     retrieveItem(id) {

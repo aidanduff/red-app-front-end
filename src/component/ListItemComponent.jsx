@@ -20,6 +20,9 @@ class ListItemComponent extends Component {
     }
 
     refreshItems(){
+        // const response = ItemDataService.retrieveAllItems();
+        // response.status === 204? this.setState({ items: [] }) : this.setState({ items: response.data });
+
         ItemDataService.retrieveAllItems()
             .then(
                 response => {
@@ -69,7 +72,7 @@ class ListItemComponent extends Component {
                                     item =>
                                         <tr key={item.id}>
                                             <td>{item.id}</td>
-                                            <td>{item.name}</td>
+                                            <td data-testid="get-all-table" >{item.name}</td>
                                             <td>{item.description}</td>
                                             <td><button className="btn btn-success" onClick={() => this.updateItemClicked(item.id)}>Update</button></td>
                                             <td><button className="btn btn-warning" onClick={() => this.deleteItemClicked(item.id)}>Delete</button></td>
